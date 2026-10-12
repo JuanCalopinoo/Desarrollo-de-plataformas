@@ -5,7 +5,7 @@
 **Responsable:** Integrante 5 (responsable de validación)
 **Estado:** Versión inicial. La retroalimentación real está **pendiente de la revisión correspondiente**.
 
-> Este documento se apoya en el MVP propuesto en `03-alcance-flujo-sdd.md` (solicitud de aptitud legal previa a la sustentación, Art. 235 del *Reglamento de Régimen Académico de la UNL*, en adelante **RRA-UNL**). Si el equipo cambia el alcance, los criterios deben ajustarse. Ninguna funcionalidad listada aquí está implementada todavía.
+> Este documento se apoya en el MVP propuesto en `03-alcance-flujo-sdd.md` (solicitud de aptitud legal previa a la sustentación, Art. 235 del *Reglamento de Régimen Académico de la UNL*, en adelante **RRA-UNL**). 
 
 ---
 
@@ -95,22 +95,9 @@ Se separan en dos grupos: las que **ya tienen respuesta en fuentes documentales*
 
 ---
 
-## 4. Puntos de coherencia detectados entre los documentos del equipo
 
-Durante la revisión de los archivos `01`–`04` se detectaron diferencias que el equipo debe resolver antes de la entrega. **Son observaciones de la revisión interna, no comentarios del docente.**
 
-| N.º | Observación | Archivos | Decisión pendiente |
-|---|---|---|---|
-| C-01 | `02.md` propone los roles Estudiante, Revisor, Responsable autorizado y Administrador; `04` menciona Estudiantes, Tutores, Lectores y Administradores. | `02`, `04` | Unificar con los roles de `03` (Estudiante, Secretario/a-Abogado/a, Decano/a, Administrador). |
-| C-02 | `04` justifica la decisión por un plazo de «5 meses»; el sílabo organiza el backend en 5 **semanas** dentro de un ciclo de 16 semanas. | `04`, sílabo | Corregir el argumento de tiempo en `04`. |
-| C-03 | `04` presenta la elección de Django + DRF como «decisión», mientras el sílabo (Semana 3) prevé el ADR formal después de la evaluación de alternativas. | `04`, sílabo | Mantenerla como decisión **preliminar** y formalizarla en el ADR. |
-| C-04 | Las referencias de `04` (Pressman 2019, Bass 2012, Fielding 2000, Ferraiolo 2001) son anteriores a los cinco años que sugiere la guía de la UNL «salvo libros clásicos». | `04`, Guía UNL | Confirmar con el docente si se aceptan como obras de referencia y complementar con fuentes recientes (por ejemplo, documentación oficial y OWASP). |
-| C-05 | `04` plantea Celery/Redis como posible incorporación; el MVP no tiene procesamiento pesado. | `04`, `03` | Dejarlo como mejora futura, no como parte del MVP. |
-| C-06 | `01` y `02` hablan del trámite de titulación en general; `03` lo acota a la aptitud legal. | `01`, `02`, `03` | Ajustar la redacción de `01` y `02` al alcance acordado. |
-
----
-
-## 5. Síntesis de la retroalimentación y ajustes
+## 4. Síntesis de la retroalimentación y ajustes
 
 > **Estado actual: pendiente de la revisión correspondiente.** No se ha registrado retroalimentación real del docente ni de otros equipos. La tabla está preparada para completarse con los comentarios efectivamente recibidos; no se deben anotar ajustes que aún no existan.
 
@@ -141,18 +128,17 @@ Durante la revisión de los archivos `01`–`04` se detectaron diferencias que e
 
 ---
 
-## 6. Conclusiones iniciales
+## 5. Conclusiones iniciales
 
 1. El trámite de titulación completo es demasiado amplio para el ciclo. Delimitarlo a la **solicitud de aptitud legal** permite apoyarse en el RRA-UNL (documentos, actores y plazo) sin inventar reglas.
 2. El valor del sistema está en el **seguimiento, las observaciones y la trazabilidad**, no en almacenar formularios; por eso los criterios de éxito priorizan estados, historial y control de acceso.
 3. La mayor incertidumbre sigue siendo la **integración con el SIAAF**: no hay evidencia de API ni acceso autorizado, de modo que el MVP la tratará como una posibilidad futura simulada.
 4. Los estados y roles propuestos son **hipótesis de trabajo**; deben confirmarse con el docente o la institución antes de convertirse en requisitos (Q-01 a Q-04).
-5. Antes de entregar es necesario **unificar la terminología y los plazos** entre los archivos `01` a `04` (sección 4).
-6. Los criterios de éxito son verificables mediante pruebas automatizadas y revisión de trazabilidad, lo que encaja con la forma de evaluación de la Unidad 1 del sílabo.
+5. Los criterios de éxito son verificables mediante pruebas automatizadas y revisión de trazabilidad, lo que encaja con la forma de evaluación de la Unidad 1 del sílabo.
 
 ---
 
-## 7. Referencias
+## 6. Referencias
 
 Universidad Nacional de Loja. (2021). *Reglamento de Régimen Académico de la Universidad Nacional de Loja* (SE-No.01-ROCS-No-04-27-01-2021). Loja, Ecuador.
 
@@ -168,20 +154,19 @@ Las referencias técnicas de `04` (Pressman & Maxim, 2019; Fielding, 2000; Ferra
 
 ---
 
-## 8. Matriz de contribución del equipo
+## 7. Matriz de contribución del equipo
 
-Los nombres y los porcentajes los completa el equipo. Se parte de la distribución de archivos de la ACD1; no se asigna ningún porcentaje por defecto.
+La distribución de archivos parte de la asignación de la ACD1. No se asignan porcentajes por defecto; el equipo los completa si el docente los solicita.
 
 | Integrante | Nombre | Archivo / sección principal | Aportes específicos | Verificado por el equipo |
 |---|---|---|---|---|
-| 1 | *(completar)* | `01-problema-contexto.md` *(confirmar asignación)* | *(completar)* | Pendiente |
-| 2 | *(completar)* | `02.md` — actores y papel del backend *(confirmar)* | *(completar)* | Pendiente |
-| 3 | *(completar)* | `03-alcance-flujo-sdd.md` | Alcance del MVP, flujo y relación SDD | Pendiente |
-| 4 | *(completar)* | `04-decision-tecnica-riesgos.md` *(confirmar)* | *(completar)* | Pendiente |
-| 5 | *(completar)* | `05-validacion-retroalimentacion.md` | Criterios, supuestos, preguntas, retroalimentación y conclusiones | Pendiente |
-
+| 1 | Mark Gonzales | `01-problema-contexto.md` | Coordinación y análisis del problema: nombre provisional, contexto del trámite de titulación, descripción del problema, necesidades y posibles soluciones; separación entre lo confirmado por las fuentes y las hipótesis; revisión final de coherencia entre los cinco archivos. | Pendiente |
+| 2 | Steeven Pardo | `02.md` (actores, necesidades y backend) | Identificación de actores y matriz de actores y necesidades con permisos propuestos; información que gestiona el sistema; papel esperado del backend, sus límites y consideración sobre el SIAAF. | Pendiente |
+| 3 | Royel Jima | `03-alcance-flujo-sdd.md` | Delimitación del MVP (inicio, fin, funcionalidades incluidas y excluidas); flujo inicial y estados propuestos; documentos requeridos; relación del proyecto con constitution, specify, clarify, plan y tasks. | Pendiente |
+| 4 | Jimmy Jhon | `04-decision-tecnica-riesgos.md` | Comparación de Django + DRF, Spring Boot y FastAPI con criterios homogéneos; decisión técnica preliminar y alternativas descartadas; matriz preliminar de riesgos técnicos y referencias. | Pendiente |
+| 5 | Juan Calopino | `05-validacion-retroalimentacion.md` | Criterios preliminares de éxito, supuestos y restricciones; preguntas de aclaración para el docente; revisión de coherencia entre los archivos; tabla de retroalimentación; conclusiones, referencias y matriz de contribución. | Pendiente |
 **Uso de herramientas de IA:** el sílabo exige declarar su uso. El equipo debe registrar aquí qué herramienta se usó, para qué y quién verificó el contenido.
 
 | Archivo | Herramienta | Uso | Verificado por |
 |---|---|---|---|
-| `03`, `05` | Claude (borrador inicial a partir de los documentos del equipo y del RRA-UNL) | Redacción de borrador, revisión de coherencia | *(completar)* |
+| `03`, `05` | se utilizó Claude (Anthropic) como herramienta de apoyo para proponer preguntas de aclaración dirigidas al docente y posibles criterios de éxito; y para detectar inconsistencias entre los documentos del equipo. |
